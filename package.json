@@ -1,0 +1,25 @@
+{
+  "name": "bun-react-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "build": "bun build ./src/index.html ./src/dialog.html ./src/iframe.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+    "start": "NODE_ENV=production bun src/index.ts"
+  },
+  "dependencies": {
+    "bidc": "^0.0.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3"
+  },
+  "module": "index.ts",
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
